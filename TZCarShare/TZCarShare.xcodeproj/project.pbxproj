@@ -16,6 +16,7 @@
 		8F8D58D02122CB330013B1C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8D58CF2122CB320013B1C9 /* LaunchScreen.xib */; };
 		8F8D58D32122CD400013B1C9 /* TZBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D58D22122CD400013B1C9 /* TZBaseNavigationViewController.m */; };
 		8F8D59072122D0940013B1C9 /* TZLeftMainDrawerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D59052122D0940013B1C9 /* TZLeftMainDrawerVC.m */; };
+		8F8D59112122DC260013B1C9 /* TZConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D59102122DC260013B1C9 /* TZConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,9 @@
 		8F8D58D22122CD400013B1C9 /* TZBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZBaseNavigationViewController.m; sourceTree = "<group>"; };
 		8F8D59052122D0940013B1C9 /* TZLeftMainDrawerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLeftMainDrawerVC.m; sourceTree = "<group>"; };
 		8F8D59062122D0940013B1C9 /* TZLeftMainDrawerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLeftMainDrawerVC.h; sourceTree = "<group>"; };
+		8F8D590F2122DC260013B1C9 /* TZConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZConst.h; sourceTree = "<group>"; };
+		8F8D59102122DC260013B1C9 /* TZConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZConst.m; sourceTree = "<group>"; };
+		8F8D59122122DC3E0013B1C9 /* TZMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZMacros.h; sourceTree = "<group>"; };
 		C937EFABBFC989963F71C9FA /* Pods-TZCarShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZCarShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-TZCarShare/Pods-TZCarShare.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,9 @@
 			children = (
 				8F8D58D42122D03F0013B1C9 /* LeftDrawer */,
 				8F8D58C32122C84D0013B1C9 /* Home */,
+				8F8D59092122DBF40013B1C9 /* Expand(拓展) */,
+				8F8D590E2122DBF40013B1C9 /* Resource */,
+				8F8D59082122DBF30013B1C9 /* Vender(第三方) */,
 				8F8D58B82122C4F90013B1C9 /* Base */,
 				8F8D58A12122B26C0013B1C9 /* TZCarShare */,
 				8F8D58A02122B26C0013B1C9 /* Products */,
@@ -549,6 +556,62 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8F8D59082122DBF30013B1C9 /* Vender(第三方) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Vender(第三方)";
+			sourceTree = "<group>";
+		};
+		8F8D59092122DBF40013B1C9 /* Expand(拓展) */ = {
+			isa = PBXGroup;
+			children = (
+				8F8D590A2122DBF40013B1C9 /* Const(常量) */,
+				8F8D590B2122DBF40013B1C9 /* DataBase */,
+				8F8D590C2122DBF40013B1C9 /* Network */,
+				8F8D590D2122DBF40013B1C9 /* Macros(宏) */,
+			);
+			path = "Expand(拓展)";
+			sourceTree = "<group>";
+		};
+		8F8D590A2122DBF40013B1C9 /* Const(常量) */ = {
+			isa = PBXGroup;
+			children = (
+				8F8D590F2122DC260013B1C9 /* TZConst.h */,
+				8F8D59102122DC260013B1C9 /* TZConst.m */,
+			);
+			path = "Const(常量)";
+			sourceTree = "<group>";
+		};
+		8F8D590B2122DBF40013B1C9 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		8F8D590C2122DBF40013B1C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8F8D590D2122DBF40013B1C9 /* Macros(宏) */ = {
+			isa = PBXGroup;
+			children = (
+				8F8D59122122DC3E0013B1C9 /* TZMacros.h */,
+			);
+			path = "Macros(宏)";
+			sourceTree = "<group>";
+		};
+		8F8D590E2122DBF40013B1C9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		C8D85935EBAD9D3FA03A680C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8D58D32122CD400013B1C9 /* TZBaseNavigationViewController.m in Sources */,
+				8F8D59112122DC260013B1C9 /* TZConst.m in Sources */,
 				8F8D58BB2122C5140013B1C9 /* TZBaseViewController.m in Sources */,
 				8F8D58B22122B26E0013B1C9 /* main.m in Sources */,
 				8F8D59072122D0940013B1C9 /* TZLeftMainDrawerVC.m in Sources */,
