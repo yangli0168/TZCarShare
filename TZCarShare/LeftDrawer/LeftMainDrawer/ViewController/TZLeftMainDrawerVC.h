@@ -8,6 +8,6 @@
 
 #import "TZBaseViewController.h"
 
-@interface TZLeftDrawerVC : TZBaseViewController
+@interface TZLeftMainDrawerVC : TZBaseViewController
 
 @end

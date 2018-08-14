@@ -7,11 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import <MMDrawerController.h>
 #import "TZHomeViewController.h"
-#import "TZLeftDrawerVC.h"
+#import "TZLeftMainDrawerVC.h"
+#import "TZBaseNavigationViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong,readwrite)MMDrawerController *drawerController;
 
 @end
 
@@ -19,20 +21,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[TZHomeViewController new]];
-    //TZHomeViewController *home = [TZHomeViewController new];
-    TZLeftDrawerVC *left = [TZLeftDrawerVC new];
-    MMDrawerController * drawerController = [[MMDrawerController alloc ]
+    TZBaseNavigationViewController *nav = [[TZBaseNavigationViewController alloc]initWithRootViewController:[TZHomeViewController new]];
+    self.drawerController = [[MMDrawerController alloc ]
                                              initWithCenterViewController:nav
-                                             leftDrawerViewController:left
+                                             leftDrawerViewController:[TZLeftMainDrawerVC new]
                                              rightDrawerViewController:nil];
-    drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningNavigationBar;
-    drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeTapCenterView;
-    self.window.rootViewController = drawerController;
+    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningNavigationBar;
+    self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeTapCenterView;
+    self.window.rootViewController = self.drawerController;
     
     // Override point for customization after application launch.
     return YES;

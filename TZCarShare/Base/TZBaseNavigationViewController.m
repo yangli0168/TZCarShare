@@ -1,22 +1,21 @@
 //
-//  TZLeftDrawerVC.m
+//  TZBaseNavigationViewController.m
 //  TZCarShare
 //
 //  Created by 杨利 on 2018/8/14.
 //  Copyright © 2018年 yangli. All rights reserved.
 //
 
-#import "TZLeftDrawerVC.h"
+#import "TZBaseNavigationViewController.h"
 
-@interface TZLeftDrawerVC ()
+@interface TZBaseNavigationViewController ()
 
 @end
 
-@implementation TZLeftDrawerVC
+@implementation TZBaseNavigationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
 }
 
